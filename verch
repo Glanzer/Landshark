@@ -1,0 +1,4 @@
+#! /bin/bash
+cp -R $1 $(buildtools/verctl)$(echo -)$(cat codename)/
+echo $(date) "forked $(buildtools/verctl)-$(cat codename) from $1" >> changelog
+./e

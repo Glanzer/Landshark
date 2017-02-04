@@ -1,0 +1,25 @@
+#! /bin/python
+
+import time
+import platform
+import argparse
+
+day=time.strftime("%d")
+month=time.strftime("%m")
+year=time.strftime("%y")
+arch=platform.machine()
+os=platform.uname()
+codename="warcow"
+nmbr=0
+version=os[0]+arch+year+month+day+str(nmbr)+"-"+codename
+
+alex=argparse.ArgumentParser()
+#calling the parser just that seems impersonal, let's call him/her alex.
+#say hello to alex, the argparser
+alex.parse_args()
+alex.add_argument("-n","--new", help="create new version", action="store_true")
+args=alex.parse_args()
+if args.new:
+	print("create a new version")
+
+print(version)

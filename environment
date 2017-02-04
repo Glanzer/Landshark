@@ -1,0 +1,8 @@
+cd /usr/stuff/Projects/Warcow/build_me/
+clear
+echo "Landshark version-control."
+echo "Please don't forget to add your changes via * >> changelog"
+echo "----------------------------------------------------------"
+ls -lsh --color=auto
+echo "----------------------------------------------------------"
+pygmentize -l c ./changelog
